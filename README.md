@@ -15,6 +15,7 @@
 2. edit build gradle :
 
       android {
+   
           compileSdkVersion 33
           ndkVersion flutter.ndkVersion
           androidResources {
