@@ -1,16 +1,50 @@
 # old
+# เรียนเชื่อม Tensorflow lite with Flutter
+เริ่มทำ วันที่ 12 /7 /2566
+ทำได้ วันที่ 13/7/2566 เวลา 2.15
+ปัญหาที่พบก็คือ เยอะมาก
+1. API Pub dev :tflite: ^1.1.2
+   - error : ![image](https://github.com/kncode74/Flutter_Tflite/assets/69451462/34861471-c96f-49ca-a20b-8bed96962131)
+   - solution : E:\flutter.pub-cache\hosted\pub.dartlang.org\tflite-1.1.2\android\build.gradle There change the dependencies at the end to
 
-A new Flutter project.
+dependencies {
+    implementation 'org.tensorflow:tensorflow-lite:+'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:+'
+}
+2. edit build gradle :
+android {
+    compileSdkVersion 33
+    ndkVersion flutter.ndkVersion
+    androidResources {
+        noCompress 'tflite'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
-## Getting Started
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
-This project is a starting point for a Flutter application.
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    aaptOptions {
+        noCompress 'tflite'
+        noCompress 'lite'
+    }
 
-A few resources to get you started if this is your first Flutter project:
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.example.old"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-build-configuration.
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+        multiDexEnabled true
+    }
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/kncode74/Flutter_Tflite/assets/69451462/a4824854-a7df-4580-873e-4ef659810a62)
