@@ -11,6 +11,7 @@ dependencies {
     implementation 'org.tensorflow:tensorflow-lite:+'
     implementation 'org.tensorflow:tensorflow-lite-gpu:+'
 }
+
 2. edit build gradle :
 android {
     compileSdkVersion 33
