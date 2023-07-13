@@ -7,12 +7,13 @@
    - error : ![image](https://github.com/kncode74/Flutter_Tflite/assets/69451462/34861471-c96f-49ca-a20b-8bed96962131)
    - solution : E:\flutter.pub-cache\hosted\pub.dartlang.org\tflite-1.1.2\android\build.gradle There change the dependencies at the end to
 
-dependencies {
-    implementation 'org.tensorflow:tensorflow-lite:+'
-    implementation 'org.tensorflow:tensorflow-lite-gpu:+'
-}
+            dependencies {
+                implementation 'org.tensorflow:tensorflow-lite:+'
+                implementation 'org.tensorflow:tensorflow-lite-gpu:+'
+            }
 
 2. edit build gradle :
+
 android {
     compileSdkVersion 33
     ndkVersion flutter.ndkVersion
