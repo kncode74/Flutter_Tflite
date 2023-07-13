@@ -1,8 +1,8 @@
 # old
 # เรียนเชื่อม Tensorflow lite with Flutter
-เริ่มทำ วันที่ 12 /7 /2566
-ทำได้ วันที่ 13/7/2566 เวลา 2.15
-ปัญหาที่พบก็คือ เยอะมาก
+- เริ่มทำ วันที่ 12 /7 /2566
+- ทำได้ วันที่ 13/7/2566 เวลา 2.15
+## ปัญหาที่พบก็คือ เยอะมาก
 1. API Pub dev :tflite: ^1.1.2
    - error : ![image](https://github.com/kncode74/Flutter_Tflite/assets/69451462/34861471-c96f-49ca-a20b-8bed96962131)
    - solution : E:\flutter.pub-cache\hosted\pub.dartlang.org\tflite-1.1.2\android\build.gradle There change the dependencies at the end to
